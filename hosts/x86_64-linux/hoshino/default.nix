@@ -1,9 +1,8 @@
 { config, pkgs, ... }:
 
 {
-
   networking = {
-    hostName = "yume";
+    hostName = "hoshino";
     interfaces = {
       ens18.ipv4.addresses = [
         {
@@ -17,4 +16,13 @@
     };
   };
 
+  users.users = {
+    aria = {
+      isNormalUser = true;
+      extraGroups = [
+        "wheel"
+        "input"
+      ];
+    };
+  };
 }

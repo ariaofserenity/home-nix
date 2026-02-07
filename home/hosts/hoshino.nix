@@ -1,5 +1,4 @@
 { inputs }:
 {
   aria = import ../aria.nix;
-  elaria = import ../elaria.nix;
 }

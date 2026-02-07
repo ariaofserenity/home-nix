@@ -5,12 +5,7 @@
   ...
 }:
 
-let
-  hostUsers = import ../../home/hosts/${config.networking.hostName}.nix;
-  mkUser = import ../../home/lib/mkUser.nix { inherit pkgs lib; };
-in
 {
-
   networking = {
     hostName = "yume";
     interfaces = {
@@ -26,17 +21,20 @@ in
     };
   };
 
-  home-manager.users = lib.mapAttrs (
-    user: cfg:
-    mkUser {
-      inherit user;
-      roles = cfg.roles;
-      extraPackages = cfg.extraPackages;
-    }
-  ) hostUsers;
-
-  users.users = lib.mapAttrs (name: cfg: {
-    isNormalUser = true;
-    extraGroups = cfg.groups;
-  }) hostUsers;
+  users.users = {
+    aria = {
+      isNormalUser = true;
+      extraGroups = [
+        "wheel"
+        "input"
+      ];
+    };
+    elaria = {
+      isNormalUser = true;
+      extraGroups = [
+        "wheel"
+        "input"
+      ];
+    };
+  };
 }

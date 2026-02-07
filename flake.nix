@@ -1,21 +1,17 @@
 {
+  description = "NixOS configuration with easy-hosts and per-host home-manager users";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    home-manager.url = "github:nix-community/home-manager";
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+    home-manager = {
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
+    niri = {
+      url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    flake-parts = {
-      url = "github:hercules-ci/flake-parts";
-      inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
     easy-hosts.url = "github:tgirlcloud/easy-hosts";
@@ -23,9 +19,7 @@
 
   outputs =
     inputs:
-    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-      imports = [ inputs.easy-hosts.flakeModule ];
-
+    inputs.easy-hosts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" ];
 
       easy-hosts = {
@@ -41,29 +35,33 @@
           "nvidia"
         ];
 
-        perTag =
-          let
-            tags = {
-              base =
-                { modulesPath, ... }:
-                {
-                  imports = [ "${modulesPath}/profiles/base.nix" ];
-                };
-              amd =
-                { modulesPath, ... }:
-                {
-                  imports = [ "${modulesPath}/system/gpu/amd.nix" ];
-                };
-              nvidia =
-                { modulesPath, ... }:
-                {
-                  imports = [ "${modulesPath}/system/gpu/nvidia.nix" ];
-                };
-            };
-          in
-          tag: {
-            modules = [ tags.${tag} ];
-          };
+        perTag = tag: {
+          modules = [
+            {
+              base = ./modules/common.nix;
+              amd = ./modules/amd.nix;
+              nvidia = ./modules/nvidia.nix;
+            }
+            .${tag}
+          ];
+        };
+
+        perHost = hostname: {
+          modules = [
+            inputs.home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = { inherit inputs; };
+
+              home-manager.users =
+                let
+                  hostUsers = ./home/hosts + "/${hostname}.nix";
+                in
+                if builtins.pathExists hostUsers then import hostUsers { inherit inputs; } else { };
+            }
+          ];
+        };
       };
     };
 }
