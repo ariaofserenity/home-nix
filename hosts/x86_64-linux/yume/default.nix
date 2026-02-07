@@ -9,6 +9,10 @@
   imports = [
     "../../../modules/system/pipewire.nix"
     "../../../modules/system/packages.nix"
+
+
+    # udevs
+    "../../../modules/system/udevs/8bitdo.nix"
     inputs.home-manager.nixosModules.default
   ];
 
