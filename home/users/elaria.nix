@@ -11,4 +11,10 @@
     firefox
     vim
   ];
+
+  imports = [
+    ../programs/niri
+
+    ../programs/discord.nix
+  ];
 }

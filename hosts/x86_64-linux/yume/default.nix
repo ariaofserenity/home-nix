@@ -6,6 +6,12 @@
 }:
 
 {
+  imports = [
+    "../../../modules/system/pipewire.nix"
+    "../../../modules/system/packages.nix"
+    inputs.home-manager.nixosModules.default
+  ];
+
   networking = {
     hostName = "yume";
     interfaces = {
@@ -18,6 +24,16 @@
     };
     defaultGateway = {
       address = "192.168.2.1";
+    };
+  };
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "aria" = import ../../../home/users/aria.nix;
+      "elaria" = import ../../../home/users/elaria.nix;
     };
   };
 
