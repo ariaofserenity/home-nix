@@ -37,12 +37,12 @@
         perTag =
           let
             tags = {
-              minimal =
+              base =
                 { modulesPath, ... }:
                 {
-                  imports = [ "${modulesPath}/profiles/base.nix" "${modulesPath}/profiles/gaming.nix"] "${modulesPath}/profiles/gpu/amd.nix"];
+                  imports = [ "${modulesPath}/profiles/base.nix"];
                 };
-            };
+            };;
           in
           tag: {
             modules = [ tags.${tag} ];
