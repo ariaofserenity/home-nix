@@ -1,9 +1,20 @@
-{config, ...}:
+{ config, ... }:
 
 {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
   time.timezone = "America/New_York";
   services.xserver.xkb.layout = "us";
   nixpkgs.config.allowUnfree = true;
+
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+  ];
+
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+
 }
