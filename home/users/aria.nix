@@ -5,7 +5,6 @@
   ...
 }:
 {
-
   home.username = "aria";
   home.homeDirectory = "/home/aria";
   home.packages = with pkgs; [
