@@ -1,10 +1,11 @@
 {
-  inputs,
+  pkgs,
+  lib,
   ...
 }:
 
 {
-  programs.noctalia-shell = {
+  programs.alacritty = {
     enable = true;
   };
 }

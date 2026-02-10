@@ -18,6 +18,16 @@
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
+    aagl = {
+      url = "github:ezKEa/aagl-gtk-on-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixos-xivlauncher-rb = {
+      url = "github:ariaofserenity/nixos-xivlauncher-rb";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     easy-hosts.url = "github:tgirlcloud/easy-hosts";
   };
 
@@ -34,11 +44,9 @@
 
         hosts.hoshino.tags = [
           "base"
-          "amd"
         ];
         hosts.yume.tags = [
           "base"
-          "nvidia"
         ];
 
         perTag =
@@ -47,17 +55,11 @@
               base =
                 { modulesPath, ... }:
                 {
-                  imports = [ "${modulesPath}/profiles/base.nix" ];
-                };
-              amd =
-                { modulesPath, ... }:
-                {
-                  imports = [ "${modulesPath}/system/gpu/amd.nix" ];
-                };
-              nvidia =
-                { modulesPath, ... }:
-                {
-                  imports = [ "${modulesPath}/system/gpu/nvidia.nix" ];
+                  imports = [
+                    "${modulesPath}/profiles/base.nix"
+                    inputs.nixos-xivlauncher-rb.nixosModules.default
+                  ];
+                  nix.settings = inputs.aagl.nixConfig;
                 };
             };
           in
