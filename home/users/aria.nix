@@ -36,9 +36,9 @@
     ../programs/niri
     ../programs/browsers
     ../programs/editors
+
     ../programs/games/hsr.nix
     ../programs/terminals/alacritty.nix
-
     ../programs/discord.nix
   ];
 }

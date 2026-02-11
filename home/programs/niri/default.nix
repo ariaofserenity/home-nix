@@ -8,5 +8,6 @@
     ./settings.nix
     ./keybinds.nix
     ./noctalia.nix
+    ./autostart.nix
   ];
 }
