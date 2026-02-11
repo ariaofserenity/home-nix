@@ -29,6 +29,11 @@
     };
 
     easy-hosts.url = "github:tgirlcloud/easy-hosts";
+
+    disko = {
+      url = "github:nix-community/disko/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

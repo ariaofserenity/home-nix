@@ -14,5 +14,6 @@
     xwayland
     ffmpeg
     wineWowPackages.stable
+    bluez
   ];
 }

@@ -16,6 +16,7 @@
     xwayland-satellite
     tree
     swaylock
+    dysk
 
     #apps
     firefox

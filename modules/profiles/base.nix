@@ -14,6 +14,12 @@
     inputs.home-manager.nixosModules.home-manager
   ];
 
+  nix.gc = {
+    automatic = true;
+    dates = "daily";
+    options = "--delete-older-than 5d";
+  };
+
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
 

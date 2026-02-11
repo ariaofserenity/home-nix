@@ -68,4 +68,30 @@
       ];
     };
   };
+
+  fonts.packages = with pkgs; [
+    fira-sans
+    roboto
+    nerd-fonts._0xproto
+    nerd-fonts.droid-sans-mono
+    jetbrains-mono
+    noto-fonts
+    noto-fonts-color-emoji
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
+    material-symbols
+    material-icons
+  ];
+
+  dbus.enable = true;
+  dbus.packages = with pkgs; [ bluez ];
+
+  printing.enable = true;
+
+  hardware.bluetooth = {
+    enable = true;
+    package = pkgs.bluez;
+  };
+
+  system.stateVersion = "25.05";
 }
