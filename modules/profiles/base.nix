@@ -8,7 +8,6 @@
 
   time.timezone = "America/New_York";
   services.xserver.xkb.layout = "us";
-  nixpkgs.config.allowUnfree = true;
 
   imports = [
     inputs.home-manager.nixosModules.home-manager

@@ -58,6 +58,8 @@
 
             nixos-xivlauncher-rb.nixosModules.default
 
+             { nixpkgs.config.allowUnfree = true; }
+
             { nix.settings = aagl.nixConfig; }
 
             ./hosts/x86_64-nixos/yume
@@ -76,6 +78,8 @@
                 nur.overlays.default
               ];
             }
+
+             { nixpkgs.config.allowUnfree = true; }
 
             nixos-xivlauncher-rb.nixosModules.default
 
