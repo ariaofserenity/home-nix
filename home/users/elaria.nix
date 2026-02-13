@@ -7,6 +7,7 @@
 {
   home.username = "elaria";
   home.homeDirectory = "/home/elaria";
+  home.stateVersion = "25.11";
   home.packages = with pkgs; [
     vim
     unzip
@@ -31,6 +32,4 @@
 
     ../programs/discord.nix
   ];
-
-  home.stateVersion = "25.11";
 }
