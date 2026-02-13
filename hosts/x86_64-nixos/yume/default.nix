@@ -10,21 +10,21 @@
   imports = [
 
     # base system
-    "../../../modules/system/pipewire.nix"
-    "../../../modules/system/packages.nix"
-    "../../../modules/system/environment.nix"
-    "../../../modules/system/shell/zsh.nix"
-    "../../../modules/system/xdg.nix"
-    "../../../modules/system/greetd.nix"
+    ../../../modules/system/pipewire.nix
+    ../../../modules/system/packages.nix
+    ../../../modules/system/environment.nix
+    ../../../modules/system/shell/zsh.nix
+    ../../../modules/system/xdg.nix
+    ../../../modules/system/greetd.nix
 
     # system programs
-    "../../../modules/system/programs/obs.nix"
-    "../../../modules/system/programs/steam.nix"
+    ../../../modules/system/programs/obs.nix
+    ../../../modules/system/programs/steam.nix
 
     # system services
-    "../../../modules/system/services/flatpak.nix"
-    "../../../modules/system/services/keyring.nix"
-    "../../../modules/system/services/ssh.nix"
+    ../../../modules/system/services/flatpak.nix
+    ../../../modules/system/services/keyring.nix
+    ../../../modules/system/services/ssh.nix
     inputs.home-manager.nixosModules.default
   ];
 
