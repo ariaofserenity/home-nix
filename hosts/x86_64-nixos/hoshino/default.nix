@@ -2,17 +2,17 @@
   lib,
   config,
   pkgs,
+  inputs,
   ...
 }:
 
 {
   imports = [
-
+    ./hardware-configuration.nix
     # base system
     ../../../modules/system/pipewire.nix
     ../../../modules/system/packages.nix
     ../../../modules/system/environment.nix
-    ../../../modules/system/shell/zsh.nix
     ../../../modules/system/xdg.nix
     ../../../modules/system/greetd.nix
 
@@ -25,12 +25,15 @@
     ../../../modules/system/services/keyring.nix
     ../../../modules/system/services/ssh.nix
     inputs.home-manager.nixosModules.default
+
+    # games
+    ../../../modules/system/games/hsr.nix
   ];
 
   networking = {
     hostName = "hoshino";
     interfaces = {
-      ens18.ipv4.addresses = [
+      eno1.ipv4.addresses = [
         {
           address = "192.168.2.10";
           prefixLength = 24;
@@ -84,7 +87,7 @@
   services.dbus.enable = true;
   services.dbus.packages = with pkgs; [ bluez ];
 
-  printing.enable = true;
+  services.printing.enable = true;
 
   hardware.bluetooth = {
     enable = true;
