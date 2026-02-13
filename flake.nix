@@ -58,7 +58,7 @@
 
             nixos-xivlauncher-rb.nixosModules.default
 
-             { nixpkgs.config.allowUnfree = true; }
+            { nixpkgs.config.allowUnfree = true; }
 
             { nix.settings = aagl.nixConfig; }
 
@@ -79,7 +79,7 @@
               ];
             }
 
-             { nixpkgs.config.allowUnfree = true; }
+            { nixpkgs.config.allowUnfree = true; }
 
             nixos-xivlauncher-rb.nixosModules.default
 

@@ -62,7 +62,7 @@ in
       "${mod}+Shift+9".action.move-column-to-workspace = [ 9 ];
       "${mod}+F".action = maximize-column;
       "${mod}+Shift+F".action = fullscreen-window;
-      "${mod}+Shift+S".action.screenshot = [];
+      "${mod}+Shift+S".action.screenshot = [ ];
       "${mod}+Space".action = toggle-window-floating;
     };
 }
