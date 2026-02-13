@@ -7,6 +7,7 @@
 {
   home.username = "aria";
   home.homeDirectory = "/home/aria";
+  home.stateVersion = "25.11";
   home.packages = with pkgs; [
     vim
     unzip
