@@ -30,7 +30,7 @@
     antimicrox
 
     #games
-    #xivlauncher-rb
+    xivlauncher-rb
   ];
 
   imports = [

@@ -8,7 +8,7 @@
 
 {
   imports = [
-
+    ./hardware-configuration.nix
     # base system
     ../../../modules/system/pipewire.nix
     ../../../modules/system/packages.nix
