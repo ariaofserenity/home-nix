@@ -84,8 +84,8 @@
     material-icons
   ];
 
-  dbus.enable = true;
-  dbus.packages = with pkgs; [ bluez ];
+  services.dbus.enable = true;
+  services.dbus.packages = with pkgs; [ bluez ];
 
   printing.enable = true;
 
@@ -100,7 +100,6 @@
       efi.canTouchEfiVariables = true;
     };
   };
-
 
   system.stateVersion = "25.05";
 }
