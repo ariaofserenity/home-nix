@@ -13,6 +13,15 @@ in
     with config.lib.niri.actions;
     let
       mod = "Alt";
+
+      noctalia =
+        cmd:
+        [
+          "noctalia-shell"
+          "ipc"
+          "call"
+        ]
+        ++ (pkgs.lib.splitString " " cmd);
     in
     {
       "${mod}+Return".action = spawn "alacritty";
