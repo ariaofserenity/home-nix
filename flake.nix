@@ -47,7 +47,7 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            "${nixpkgs}/nixos/modules/profiles/base.nix"
+            "${nixpkgs}/modules/profiles/base.nix"
 
             {
               nixpkgs.overlays = [
@@ -70,7 +70,7 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            "${nixpkgs}/nixos/modules/profiles/base.nix"
+            "${nixpkgs}/modules/profiles/base.nix"
 
             {
               nixpkgs.overlays = [
