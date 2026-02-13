@@ -45,6 +45,8 @@
           modules = [
             "${nixpkgs}/nixos/modules/profiles/base.nix"
 
+            { nixpkgs.overlays = [ aagl.overlays.default ]; }
+
             nixos-xivlauncher-rb.nixosModules.default
 
             { nix.settings = aagl.nixConfig; }
@@ -58,6 +60,8 @@
           specialArgs = { inherit inputs; };
           modules = [
             "${nixpkgs}/nixos/modules/profiles/base.nix"
+
+            { nixpkgs.overlays = [ aagl.overlays.default ]; }
 
             nixos-xivlauncher-rb.nixosModules.default
 
