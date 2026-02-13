@@ -13,7 +13,7 @@
     pavucontrol
     xwayland
     ffmpeg
-    wineWow64Packages.stable
+    #wineWow64Packages.stable
     bluez
   ];
 }
