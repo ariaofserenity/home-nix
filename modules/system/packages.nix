@@ -16,5 +16,6 @@
     wineWow64Packages.stable
     winetricks
     bluez
+    winboat
   ];
 }
