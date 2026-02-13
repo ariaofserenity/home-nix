@@ -57,6 +57,7 @@
         "wheel"
         "input"
         "networkmanager"
+        "docker"
       ];
     };
     elaria = {
@@ -65,6 +66,7 @@
         "wheel"
         "input"
         "networkmanager"
+        "docker"
       ];
     };
   };
@@ -92,6 +94,15 @@
     enable = true;
     package = pkgs.bluez;
   };
+
+  hardware.nvidia.prime = {
+    intelBusId = "PCI:0@0:2:0";
+    nvidiaBusId = "PCI:1@0:0:0";
+  };
+
+  hardware.graphics.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia.open = true; 
 
   boot = {
     loader = {
