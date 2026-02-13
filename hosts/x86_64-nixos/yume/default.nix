@@ -13,7 +13,6 @@
     ../../../modules/system/pipewire.nix
     ../../../modules/system/packages.nix
     ../../../modules/system/environment.nix
-    ../../../modules/system/shell/zsh.nix
     ../../../modules/system/xdg.nix
     ../../../modules/system/greetd.nix
 
