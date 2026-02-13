@@ -38,6 +38,7 @@
       home-manager,
       nixos-xivlauncher-rb,
       aagl,
+      nur,
       ...
     }@inputs:
     {
