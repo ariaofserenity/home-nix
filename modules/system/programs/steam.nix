@@ -32,8 +32,6 @@
     gamescope
     steam-run
 
-    wineWowPackages.stagingFull
-    winetricks
     freetype
     fontconfig
     zenity
