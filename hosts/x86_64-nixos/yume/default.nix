@@ -24,6 +24,7 @@
     ../../../modules/system/services/flatpak.nix
     ../../../modules/system/services/keyring.nix
     ../../../modules/system/services/ssh.nix
+    ../../../modules/system/services/rdp.nix
     inputs.home-manager.nixosModules.default
 
     #games
