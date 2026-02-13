@@ -90,6 +90,11 @@
     package = pkgs.bluez;
   };
 
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   boot = {
     loader = {
       systemd-boot.enable = true;

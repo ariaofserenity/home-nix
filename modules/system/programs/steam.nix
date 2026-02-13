@@ -24,12 +24,6 @@
   };
 
   programs.gamemode.enable = true;
-
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
-
   environment.systemPackages = with pkgs; [
     libusb1
     usbutils
