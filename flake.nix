@@ -47,8 +47,6 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            "${nixpkgs}/modules/profiles/base.nix"
-
             {
               nixpkgs.overlays = [
                 aagl.overlays.default
@@ -61,7 +59,8 @@
             { nixpkgs.config.allowUnfree = true; }
 
             { nix.settings = aagl.nixConfig; }
-
+            
+            ./modules/profiles/base.nix
             ./hosts/x86_64-nixos/yume
           ];
         };
@@ -70,8 +69,6 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            "${nixpkgs}/modules/profiles/base.nix"
-
             {
               nixpkgs.overlays = [
                 aagl.overlays.default
@@ -85,6 +82,7 @@
 
             { nix.settings = aagl.nixConfig; }
 
+            ./modules/profiles/base.nix
             ./hosts/x86_64-nixos/hoshino
           ];
         };
