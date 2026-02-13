@@ -15,6 +15,7 @@ in
     {
       "${mod}+Return".action = spawn "alacritty";
       "Super+Alt+L".action = spawn "swaylock";
+      "Alt+D".action = spawn "fuzzel";
       "${mod}+O" = {
         action = toggle-overview;
         repeat = false;

@@ -43,6 +43,10 @@
     defaultGateway = {
       address = "192.168.2.1";
     };
+    nameservers = [
+      "192.168.2.5"
+      "1.1.1.1"
+    ];
   };
 
   home-manager = {
@@ -61,6 +65,7 @@
       extraGroups = [
         "wheel"
         "input"
+        "networkmanager"
       ];
     };
     elaria = {
@@ -68,6 +73,7 @@
       extraGroups = [
         "wheel"
         "input"
+        "networkmanager"
       ];
     };
   };
