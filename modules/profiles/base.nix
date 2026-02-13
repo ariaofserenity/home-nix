@@ -6,7 +6,7 @@
     "flakes"
   ];
 
-  time.timezone = "America/New_York";
+  time.timeZone = "America/New_York";
   services.xserver.xkb.layout = "us";
 
   nix.gc = {
