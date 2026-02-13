@@ -29,6 +29,7 @@
     obsidian
     fuzzel
     antimicrox
+    keymapp
 
     #games
     xivlauncher-rb
