@@ -32,17 +32,7 @@
 
   networking = {
     hostName = "yume";
-    interfaces = {
-      ens18.ipv4.addresses = [
-        {
-          address = "192.168.2.32";
-          prefixLength = 24;
-        }
-      ];
-    };
-    defaultGateway = {
-      address = "192.168.2.1";
-    };
+    networkmanager.enable = true;
     nameservers = [
       "192.168.2.5"
       "1.1.1.1"

@@ -19,8 +19,6 @@
     options = "--delete-older-than 5d";
   };
 
-  networking.networkmanager.enable = true;
-
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
 
