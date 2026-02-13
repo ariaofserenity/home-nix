@@ -14,6 +14,7 @@
     xwayland
     ffmpeg
     wineWow64Packages.stable
+    winetricks
     bluez
   ];
 }
