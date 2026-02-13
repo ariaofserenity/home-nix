@@ -87,7 +87,7 @@
   services.dbus.enable = true;
   services.dbus.packages = with pkgs; [ bluez ];
 
-  printing.enable = true;
+  services.printing.enable = true;
 
   hardware.bluetooth = {
     enable = true;
