@@ -9,10 +9,6 @@
   time.timezone = "America/New_York";
   services.xserver.xkb.layout = "us";
 
-  imports = [
-    inputs.home-manager.nixosModules.home-manager
-  ];
-
   nix.gc = {
     automatic = true;
     dates = "daily";
