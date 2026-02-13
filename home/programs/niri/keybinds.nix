@@ -15,14 +15,6 @@ in
     {
       "${mod}+Return".action = spawn "alacritty";
       "Super+Alt+L".action = spawn "swaylock";
-      XF86AudioRaiseVolume.action = set-volume "5%+";
-      XF86AudioLowerVolume.action = set-volume "5%-";
-      XF86AudioMute.action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle";
-      XF86AudioMicMute.action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle";
-      XF86AudioPlay.action = playerctl "play-pause";
-      XF86AudioStop.action = playerctl "pause";
-      XF86AudioPrev.action = playerctl "previous";
-      XF86AudioNext.action = playerctl "next";
       "${mod}+O" = {
         action = toggle-overview;
         repeat = false;
