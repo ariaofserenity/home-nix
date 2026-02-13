@@ -61,7 +61,7 @@
                 { modulesPath, ... }:
                 {
                   imports = [
-                    ./modules/profiles/base.nix
+                    "${modulesPath}/profiles/base.nix"
                     inputs.nixos-xivlauncher-rb.nixosModules.default
                   ];
                   nix.settings = inputs.aagl.nixConfig;
