@@ -5,7 +5,7 @@
 {
 
   imports = [
-     inputs.aagl.nixosModules.default
+    inputs.aagl.nixosModules.default
   ];
 
   programs.the-honkers-railway-launcher.enable = true;

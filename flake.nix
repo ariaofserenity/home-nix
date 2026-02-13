@@ -26,7 +26,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     niri.url = "github:sodiboo/niri-flake";
-        nur = {
+    nur = {
       url = "github:nix-community/NUR";
     };
   };
@@ -48,7 +48,12 @@
           modules = [
             "${nixpkgs}/nixos/modules/profiles/base.nix"
 
-            { nixpkgs.overlays = [ aagl.overlays.default ]; }
+            {
+              nixpkgs.overlays = [
+                aagl.overlays.default
+                nur.overlays.default
+              ];
+            }
 
             nixos-xivlauncher-rb.nixosModules.default
 
@@ -64,7 +69,12 @@
           modules = [
             "${nixpkgs}/nixos/modules/profiles/base.nix"
 
-            { nixpkgs.overlays = [ aagl.overlays.default ]; }
+            {
+              nixpkgs.overlays = [
+                aagl.overlays.default
+                nur.overlays.default
+              ];
+            }
 
             nixos-xivlauncher-rb.nixosModules.default
 
