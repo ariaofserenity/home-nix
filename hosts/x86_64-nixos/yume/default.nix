@@ -25,6 +25,9 @@
     ../../../modules/system/services/keyring.nix
     ../../../modules/system/services/ssh.nix
     inputs.home-manager.nixosModules.default
+
+    #games
+    ../../../modules/system/games/hsr.nix
   ];
 
   networking = {
