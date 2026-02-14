@@ -82,7 +82,9 @@
     noto-fonts-cjk-serif
     material-symbols
     material-icons
-  ];
+  ] ++ (with inputs.nixos-fonts.packages.x86_64-linux; [
+      azukifont
+    ]);
 
   services.dbus.enable = true;
   services.dbus.packages = with pkgs; [ bluez ];

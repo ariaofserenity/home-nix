@@ -35,8 +35,6 @@
         };
       };
 
-
-
       input = {
         keyboard.xkb.layout = "us";
         focus-follows-mouse = {

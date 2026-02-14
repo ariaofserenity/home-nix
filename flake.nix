@@ -29,6 +29,7 @@
     nur = {
       url = "github:nix-community/NUR";
     };
+    nixos-fonts.url = "github:Takamatsu-Naoki/nixos-fonts";
   };
 
   outputs =

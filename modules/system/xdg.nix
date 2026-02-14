@@ -15,4 +15,11 @@
       };
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    adwaita-icon-theme
+    adw-gtk3
+  ];
+
+  programs.dconf.enable = true;
 }

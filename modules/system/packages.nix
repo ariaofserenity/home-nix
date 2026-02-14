@@ -18,5 +18,8 @@
     bluez
     nixfmt
     feh
+    lxappearance
   ];
+
+
 }

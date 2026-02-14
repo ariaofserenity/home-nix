@@ -13,7 +13,7 @@ in
       mod = "Alt";
     in
     {
-      "${mod}+Return".action = spawn "alacritty";
+      "${mod}+Return".action = spawn "ghostty";
       "Super+Alt+L".action = spawn "swaylock";
       "Alt+D".action = spawn "fuzzel";
       "${mod}+O" = {
