@@ -19,6 +19,7 @@
     nixfmt
     feh
     lxappearance
+    gearlever
   ];
 
 }
