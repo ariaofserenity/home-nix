@@ -23,6 +23,7 @@
     tree
     swaylock
     dysk
+    fastfetch
     pywal
     pywalfox-native
 
