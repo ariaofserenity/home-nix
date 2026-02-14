@@ -23,6 +23,8 @@
     tree
     swaylock
     dysk
+    pywal
+    pywalfox-native
 
     #apps
     firefox
