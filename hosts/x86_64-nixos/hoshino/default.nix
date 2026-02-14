@@ -95,6 +95,10 @@
 
   services.printing.enable = true;
 
+  services.flatpak.packages = [
+    "com.discordapp.Discord"
+  ];
+
   hardware.bluetooth = {
     enable = true;
     package = pkgs.bluez;

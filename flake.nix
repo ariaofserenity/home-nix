@@ -30,6 +30,7 @@
       url = "github:nix-community/NUR";
     };
     nixos-fonts.url = "github:Takamatsu-Naoki/nixos-fonts";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
   outputs =
@@ -40,6 +41,7 @@
       nixos-xivlauncher-rb,
       aagl,
       nur,
+      nix-flatpak,
       ...
     }@inputs:
     {
@@ -80,6 +82,7 @@
             { nixpkgs.config.allowUnfree = true; }
 
             nixos-xivlauncher-rb.nixosModules.default
+            nix-flatpak.nixosModules.nix-flatpak
 
             { nix.settings = aagl.nixConfig; }
 

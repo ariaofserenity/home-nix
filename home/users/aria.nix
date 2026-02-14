@@ -64,7 +64,7 @@
 
     ../programs/terminals/alacritty.nix
     ../programs/terminals/ghostty.nix
-    ../programs/discord.nix
+    #../programs/discord.nix
     ../programs/shell/zsh.nix
   ];
 }
