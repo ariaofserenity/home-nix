@@ -52,6 +52,7 @@
 
   home-manager = {
     useGlobalPkgs = true;
+    backupFileExtension = "backup";
     useUserPackages = true;
     extraSpecialArgs = { inherit inputs; };
     users = {

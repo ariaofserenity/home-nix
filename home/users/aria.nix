@@ -27,6 +27,7 @@
     pywal
     pywalfox-native
     quickshell
+    jq
 
     #apps
     firefox
