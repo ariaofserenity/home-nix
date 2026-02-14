@@ -59,7 +59,7 @@
             { nixpkgs.config.allowUnfree = true; }
 
             { nix.settings = aagl.nixConfig; }
-            
+
             ./modules/profiles/base.nix
             ./hosts/x86_64-nixos/yume
           ];

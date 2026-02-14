@@ -3,9 +3,9 @@
   environment.systemPackages = with pkgs; [
     wayvnc
   ];
-  
+
   networking.firewall.allowedTCPPorts = [ 5900 ];
-  
+
   systemd.user.services.wayvnc = {
     description = "wayvnc VNC server";
     wantedBy = [ "graphical-session.target" ];

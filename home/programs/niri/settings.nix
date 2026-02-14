@@ -7,6 +7,7 @@
     enable = true;
     package = pkgs.niri;
     settings = {
+      cursor.size = 12;
       prefer-no-csd = true;
       hotkey-overlay = {
         skip-at-startup = true;
@@ -14,20 +15,34 @@
       layout = {
         gaps = 12;
 
+        preset-column-widths = [
+          { proportion = 0.33333; }
+          { proportion = 0.5; }
+          { proportion = 0.66667; }
+        ];
+
+        default-column-width.proportion = 0.5;
+
         focus-ring = {
           enable = true;
           width = 2;
           active = {
-            color = "#a7a7a7";
+            color = "#e0def4";
           };
           inactive = {
             color = "#505050";
           };
         };
       };
+
+
+
       input = {
         keyboard.xkb.layout = "us";
-        focus-follows-mouse.enable = true;
+        focus-follows-mouse = {
+          enable = true;
+          max-scroll-amount = "0%";
+        };
         warp-mouse-to-focus.enable = false;
       };
       outputs = {
