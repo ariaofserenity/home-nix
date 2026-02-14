@@ -163,15 +163,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1770940540,
-        "narHash": "sha256-w+Z20Ur2Kt4UfNBm0f1A8K8UwMvoUNhHquq1zsAWPfo=",
-        "owner": "ariaofserenity",
+        "lastModified": 1770896802,
+        "narHash": "sha256-5zH+3/sTken0QpVfteJFMoPXt44aaCAZeEiaWx9CVow=",
+        "owner": "The1Penguin",
         "repo": "nixos-xivlauncher-rb",
-        "rev": "0ae6727e816bbe29b0aea3d97c13dbfff55c4ccd",
+        "rev": "5b8d6d19378a21a06b19795aaeb85768b47c932c",
         "type": "github"
       },
       "original": {
-        "owner": "ariaofserenity",
+        "owner": "The1Penguin",
         "repo": "nixos-xivlauncher-rb",
         "type": "github"
       }

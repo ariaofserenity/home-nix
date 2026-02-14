@@ -13,6 +13,17 @@
       };
       layout = {
         gaps = 12;
+
+        focus-ring = {
+          enable = true;
+          width = 2;
+          active = {
+            color = "#a7a7a7";
+          };
+          inactive = {
+            color = "#505050";
+          };
+        };
       };
       input = {
         keyboard.xkb.layout = "us";

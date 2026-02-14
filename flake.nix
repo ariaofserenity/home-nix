@@ -18,7 +18,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-xivlauncher-rb = {
-      url = "github:ariaofserenity/nixos-xivlauncher-rb";
+      url = "github:The1Penguin/nixos-xivlauncher-rb";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     disko = {
