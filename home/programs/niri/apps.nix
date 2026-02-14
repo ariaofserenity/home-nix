@@ -4,7 +4,7 @@
 
 {
   browser = "firefox";
-  terminal = "${pkgs.alacritty}/bin/alacritty";
+  terminal = "${pkgs.ghostty}/bin/ghostty";
   fileManager = "${pkgs.thunar}/bin/thunar";
-  appLauncher = "${pkgs.walker}/bin/fuzzel";
+  appLauncher = "${pkgs.fuzzel}/bin/fuzzel";
 }

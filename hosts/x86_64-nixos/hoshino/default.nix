@@ -67,6 +67,7 @@
         "input"
         "networkmanager"
         "docker"
+        "plugdev"
       ];
     };
   };
@@ -120,6 +121,8 @@
   # zsa voyager udev for flashing
    services.udev.extraRules = ''
       SUBSYSTEMS=="usb", ATTRS{idVendor}=="3297", MODE:="0666", SYMLINK+="ignition_dfu"
+      KERNEL=="hidraw*", ATTRS{idVendor}=="16c0", MODE="0664", GROUP="plugdev"
+      KERNEL=="hidraw*", ATTRS{idVendor}=="3297", MODE="0664", GROUP="plugdev"
   '';
 
   system.stateVersion = "25.11";

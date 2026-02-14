@@ -26,6 +26,7 @@
     fastfetch
     pywal
     pywalfox-native
+    quickshell
 
     #apps
     firefox
@@ -38,6 +39,7 @@
     fuzzel
     antimicrox
     keymapp
+    gimp
 
     #games
     xivlauncher-rb
@@ -67,7 +69,7 @@
 
     ../programs/terminals/alacritty.nix
     ../programs/terminals/ghostty.nix
-    #../programs/discord.nix
+    #../programs/discord.nix nixpkgs discord doesn't support krisp for now
     ../programs/shell/zsh.nix
   ];
 }

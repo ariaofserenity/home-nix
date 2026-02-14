@@ -13,9 +13,15 @@ in
       mod = "Alt";
     in
     {
-      "${mod}+Return".action = spawn "ghostty";
-      "Super+Alt+L".action = spawn "swaylock";
-      "Alt+D".action = spawn "fuzzel";
+      "${mod}+Return".action = spawn apps.terminal;
+      "Ctrl+Alt+L".action.spawn = [
+        "noctalia-shell"
+        "ipc"
+        "call"
+        "lockScreen"
+        "lock"
+      ];
+      "Alt+D".action = spawn apps.appLauncher;
       "${mod}+O" = {
         action = toggle-overview;
         repeat = false;
