@@ -9,6 +9,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./mounts.nix
     # base system
     ../../../modules/system/pipewire.nix
     ../../../modules/system/packages.nix
@@ -70,19 +71,22 @@
     };
   };
 
-  fonts.packages = with pkgs; [
-    fira-sans
-    roboto
-    nerd-fonts._0xproto
-    nerd-fonts.droid-sans-mono
-    jetbrains-mono
-    noto-fonts
-    noto-fonts-color-emoji
-    noto-fonts-cjk-sans
-    noto-fonts-cjk-serif
-    material-symbols
-    material-icons
-  ] ++ (with inputs.nixos-fonts.packages.x86_64-linux; [
+  fonts.packages =
+    with pkgs;
+    [
+      fira-sans
+      roboto
+      nerd-fonts._0xproto
+      nerd-fonts.droid-sans-mono
+      jetbrains-mono
+      noto-fonts
+      noto-fonts-color-emoji
+      noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
+      material-symbols
+      material-icons
+    ]
+    ++ (with inputs.nixos-fonts.packages.x86_64-linux; [
       azukifont
     ]);
 

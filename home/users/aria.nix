@@ -13,7 +13,6 @@
     XCURSOR_SIZE = 12;
   };
 
-
   home.packages = with pkgs; [
     vim
     unzip
