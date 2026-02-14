@@ -12,6 +12,7 @@
     shellAliases = {
       ll = "ls -l";
       update = "sudo nixos-rebuild switch";
+      noct-refresh = "~/home-nix/scripts/restart-noctalia.sh";
     };
     history = {
       size = 10000;
