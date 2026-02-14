@@ -117,5 +117,10 @@
     };
   };
 
+  # zsa voyager udev for flashing
+   services.udev.extraRules = ''
+      SUBSYSTEMS=="usb", ATTRS{idVendor}=="3297", MODE:="0666", SYMLINK+="ignition_dfu"
+  '';
+
   system.stateVersion = "25.11";
 }
