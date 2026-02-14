@@ -85,6 +85,7 @@
       noto-fonts-cjk-serif
       material-symbols
       material-icons
+      terminus_font
     ]
     ++ (with inputs.nixos-fonts.packages.x86_64-linux; [
       azukifont
