@@ -29,6 +29,9 @@
 
     # games
     ../../../modules/system/games/hsr.nix
+
+    # patches
+    ../../../modules/system/krisp_patcher.nix
   ];
 
   networking = {
@@ -100,10 +103,6 @@
   services.dbus.packages = with pkgs; [ bluez ];
 
   services.printing.enable = true;
-
-  services.flatpak.packages = [
-    "com.discordapp.Discord"
-  ];
 
   hardware.bluetooth = {
     enable = true;

@@ -46,9 +46,6 @@
     xivlauncher-rb
   ];
 
-  xdg.configFile."gtk-4.0/gtk.css".force = true;
-  xdg.configFile."gtk-3.0/settings.ini".force = true;
-
   gtk = {
     enable = true;
     theme = {
@@ -70,7 +67,7 @@
 
     ../programs/terminals/alacritty.nix
     ../programs/terminals/ghostty.nix
-    #../programs/discord.nix nixpkgs discord doesn't support krisp for now
+    ../programs/discord.nix
     ../programs/shell/zsh.nix
   ];
 }
