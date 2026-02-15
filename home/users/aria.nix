@@ -13,37 +13,44 @@
     XCURSOR_SIZE = 12;
   };
 
-  home.packages = with pkgs; [
-    vim
-    unzip
-    rar
-    mpv
-    dysk
-    xwayland-satellite
-    tree
-    swaylock
-    dysk
-    fastfetch
-    pywal
-    pywalfox-native
-    quickshell
-    jq
+  home.packages =
+    with pkgs;
+    [
+      vim
+      unzip
+      rar
+      mpv
+      dysk
+      xwayland-satellite
+      tree
+      swaylock
+      dysk
+      fastfetch
+      pywal
+      pywalfox-native
+      quickshell
+      jq
 
-    #apps
-    firefox
-    lutris
-    prismlauncher
-    file-roller
-    qbittorrent
-    obsidian
-    fuzzel
-    antimicrox
-    keymapp
-    gimp
+      #apps
+      firefox
+      lutris
+      prismlauncher
+      file-roller
+      qbittorrent
+      obsidian
+      fuzzel
+      antimicrox
+      keymapp
+      gimp
 
-    #games
-    xivlauncher-rb
-  ];
+      #games
+      xivlauncher-rb
+    ]
+    ++ (with pkgs.xfce; [
+      thunar
+      thunar-volman
+      thunar-archive-plugin
+    ]);
 
   gtk = {
     enable = true;
@@ -67,7 +74,6 @@
     ../programs/terminals/alacritty.nix
     ../programs/terminals/ghostty.nix
     ../programs/discord.nix
-    ../programs/thunar.nix
     ../programs/shell/zsh.nix
   ];
 }
