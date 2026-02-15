@@ -64,6 +64,7 @@
   };
 
   programs.zsh.enable = true;
+  programs.xfconf.enable = true; # allow thunar to save preferences
 
   users.users = {
     aria = {
