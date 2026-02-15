@@ -34,7 +34,6 @@
     lutris
     prismlauncher
     file-roller
-    thunar
     qbittorrent
     obsidian
     fuzzel
@@ -68,6 +67,7 @@
     ../programs/terminals/alacritty.nix
     ../programs/terminals/ghostty.nix
     ../programs/discord.nix
+    ../programs/thunar.nix
     ../programs/shell/zsh.nix
   ];
 }

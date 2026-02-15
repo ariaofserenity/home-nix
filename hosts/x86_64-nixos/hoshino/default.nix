@@ -65,6 +65,8 @@
 
   programs.zsh.enable = true;
   programs.xfconf.enable = true; # allow thunar to save preferences
+  services.gvfs.enable = true; # allow thunar to show mount/trash
+  services.tumbler.enable = true; # thumbnail support for images
 
   users.users = {
     aria = {
