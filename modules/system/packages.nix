@@ -21,6 +21,8 @@
     lxappearance
     gearlever
     tuigreet
+    python3
+    evtest
   ];
 
 }
