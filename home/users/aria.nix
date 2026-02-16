@@ -30,6 +30,9 @@
       pywalfox-native
       quickshell
       jq
+      thunar
+      thunar-volman
+      thunar-archive-plugin
 
       #apps
       firefox
@@ -45,12 +48,7 @@
 
       #games
       xivlauncher-rb
-    ]
-    ++ (with pkgs.xfce; [
-      thunar
-      thunar-volman
-      thunar-archive-plugin
-    ]);
+    ];
 
   gtk = {
     enable = true;
