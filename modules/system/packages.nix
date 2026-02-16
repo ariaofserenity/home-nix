@@ -20,6 +20,7 @@
     feh
     lxappearance
     gearlever
+    tuigreet
   ];
 
 }
