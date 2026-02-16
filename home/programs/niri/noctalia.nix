@@ -428,7 +428,7 @@
       };
       sessionMenu = {
         enableCountdown = true;
-        countdownDuration = 10000;
+        countdownDuration = 2000;
         position = "center";
         showHeader = true;
         showKeybinds = true;
