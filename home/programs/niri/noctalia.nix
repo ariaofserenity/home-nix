@@ -181,7 +181,7 @@
         screenOverrides = [ ];
       };
       general = {
-        avatarImage = "/home/aria/.face/aod.png";
+        avatarImage = "~/home-nix/assets/icon/pfp.png";
         dimmerOpacity = 0.2;
         showScreenCorners = false;
         forceBlackScreenCorners = false;
@@ -272,7 +272,7 @@
       wallpaper = {
         enabled = true;
         overviewEnabled = false;
-        directory = "/home/aria/Wallpapers";
+        directory = "~/home-nix/assets/wallpapers";
         monitorDirectories = [ ];
         enableMultiMonitorDirectories = false;
         showHiddenFiles = false;
