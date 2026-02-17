@@ -43,6 +43,7 @@
     antimicrox
     keymapp
     gimp
+    zathura
 
     #games
     xivlauncher-rb
