@@ -107,17 +107,23 @@
 
   services.printing.enable = true;
 
-  hardware.bluetooth = {
-    enable = true;
-    package = pkgs.bluez;
-  };
+  hardware = {
+    uinput.enable = true;
+    opentabletdriver.enable = true;
 
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
+
+    bluetooth = {
+      enable = true;
+      package = pkgs.bluez;
+    };
   };
 
   boot = {
+    kernelModules = [ "uinput" ];
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
