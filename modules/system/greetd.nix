@@ -3,9 +3,9 @@
   config,
   ...
 }:
-let 
+let
   tuigreet = "${pkgs.tuigreet}/bin/tuigreet";
-in 
+in
 {
   services.greetd = {
     enable = true;

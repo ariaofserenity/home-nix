@@ -25,7 +25,6 @@
         ];
         "org.freedesktop.impl.portal.FileChooser" = [
           "gtk"
-          "gnome"
         ];
         "org.freedesktop.impl.portal.OpenURI" = [
           "gtk"

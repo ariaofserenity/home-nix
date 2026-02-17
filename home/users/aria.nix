@@ -13,42 +13,40 @@
     XCURSOR_SIZE = 12;
   };
 
-  home.packages =
-    with pkgs;
-    [
-      vim
-      unzip
-      rar
-      mpv
-      dysk
-      xwayland-satellite
-      tree
-      swaylock
-      dysk
-      fastfetch
-      pywal
-      pywalfox-native
-      quickshell
-      jq
-      thunar
-      thunar-volman
-      thunar-archive-plugin
+  home.packages = with pkgs; [
+    vim
+    unzip
+    rar
+    mpv
+    dysk
+    xwayland-satellite
+    tree
+    swaylock
+    dysk
+    fastfetch
+    pywal
+    pywalfox-native
+    quickshell
+    jq
+    thunar
+    thunar-volman
+    thunar-archive-plugin
 
-      #apps
-      firefox
-      lutris
-      prismlauncher
-      file-roller
-      qbittorrent
-      obsidian
-      fuzzel
-      antimicrox
-      keymapp
-      gimp
+    #apps
+    firefox
+    lutris
+    prismlauncher
+    file-roller
+    qbittorrent
+    obsidian
+    fuzzel
+    antimicrox
+    keymapp
+    gimp
 
-      #games
-      xivlauncher-rb
-    ];
+    #games
+    xivlauncher-rb
+  ];
 
   gtk = {
     enable = true;
