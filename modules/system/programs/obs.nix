@@ -10,7 +10,9 @@
     plugins = with pkgs.obs-studio-plugins; [
       obs-vkcapture
       obs-vaapi
+      wlrobs
       obs-composite-blur
+      obs-pipewire-audio-capture
     ];
   };
 
