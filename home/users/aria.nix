@@ -71,5 +71,6 @@
     ../programs/terminals/ghostty.nix
     ../programs/discord.nix
     ../programs/shell/zsh.nix
+    ../programs/ghidra.nix
   ];
 }
