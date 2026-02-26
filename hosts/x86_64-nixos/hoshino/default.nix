@@ -130,6 +130,10 @@
     };
   };
 
+  nix.settings = {
+    download-buffer-size = 524288000;
+  };
+
   # zsa voyager udev for flashing
   services.udev.extraRules = ''
     SUBSYSTEMS=="usb", ATTRS{idVendor}=="3297", MODE:="0666", SYMLINK+="ignition_dfu"
