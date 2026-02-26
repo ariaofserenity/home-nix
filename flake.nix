@@ -76,18 +76,10 @@
               nixpkgs.overlays = [
                 aagl.overlays.default
                 nur.overlays.default
-
-                # temporary workaround for picosvg failing to build
-                (final: prev: {
-                  pythonPackagesExtensions = prev.pythonPackagesExtensions ++ [
-                    (python-final: python-prev: {
-                      picosvg = python-prev.picosvg.overridePythonAttrs (oldAttrs: {
-                        doCheck = false;
-                      });
-                    })
-                  ];
-                })
-
+                
+                # temporary workarounds
+                (import ./overlays/dwarfs-boost.nix)
+                (import ./overlays/picosvg.nix)
               ];
             }
 
