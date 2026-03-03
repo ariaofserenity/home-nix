@@ -110,6 +110,7 @@
   hardware = {
     uinput.enable = true;
     opentabletdriver.enable = true;
+    amdgpu.opencl.enable = true;
 
     graphics = {
       enable = true;

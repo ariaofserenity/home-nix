@@ -43,6 +43,7 @@
     antimicrox
     keymapp
     gimp
+    davinci-resolve
 
     #games
     xivlauncher-rb
