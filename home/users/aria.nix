@@ -44,6 +44,7 @@
     keymapp
     gimp
     davinci-resolve
+    azahar
 
     #games
     xivlauncher-rb
