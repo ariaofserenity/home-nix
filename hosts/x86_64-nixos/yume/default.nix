@@ -43,6 +43,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    backupFileExtension = "backup";
     extraSpecialArgs = { inherit inputs; };
     users = {
       "aria" = import ../../../home/users/aria.nix;
