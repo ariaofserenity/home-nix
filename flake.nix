@@ -54,6 +54,10 @@
               nixpkgs.overlays = [
                 aagl.overlays.default
                 nur.overlays.default
+                
+                # temporary workarounds
+                (import ./overlays/dwarfs-boost.nix)
+                (import ./overlays/picosvg.nix)
               ];
             }
 
