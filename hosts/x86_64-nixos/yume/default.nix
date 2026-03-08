@@ -14,7 +14,7 @@
     ../../../modules/system/packages.nix
     ../../../modules/system/environment.nix
     ../../../modules/system/xdg.nix
-    ../../../modules/system/greetd.nix
+    ../../../modules/system/kde.nix
 
     # system programs
     ../../../modules/system/programs/obs.nix
@@ -26,9 +26,6 @@
     ../../../modules/system/services/ssh.nix
     ../../../modules/system/services/rdp.nix
     inputs.home-manager.nixosModules.default
-
-    #games
-    #../../../modules/system/games/hsr.nix
   ];
 
   networking = {
@@ -46,7 +43,6 @@
     backupFileExtension = "backup";
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "aria" = import ../../../home/users/aria.nix;
       "elaria" = import ../../../home/users/elaria.nix;
     };
   };
