@@ -16,6 +16,12 @@
     dysk
     xwayland-satellite
     tree
+    dysk
+    fastfetch
+    jq
+    thunar
+    thunar-volman
+    thunar-archive-plugin
 
     #apps
     firefox
@@ -25,11 +31,15 @@
     thunar
     qbittorrent
     obsidian
+
+    # games
+    xivlauncher-rb
   ];
 
   imports = [
     ../programs/niri
-
+    ../programs/browsers
     ../programs/discord.nix
+    ../programs/terminals/ghostty.nix
   ];
 }
