@@ -45,6 +45,8 @@
     gimp
     davinci-resolve
     azahar
+    remmina
+    tigervnc
 
     #games
     xivlauncher-rb

@@ -28,7 +28,7 @@
     inputs.home-manager.nixosModules.default
 
     #games
-    ../../../modules/system/games/hsr.nix
+    #../../../modules/system/games/hsr.nix
   ];
 
   networking = {
