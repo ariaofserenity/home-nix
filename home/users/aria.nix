@@ -47,6 +47,7 @@
     azahar
     remmina
     tigervnc
+    rustdesk-flutter
 
     #games
     xivlauncher-rb
