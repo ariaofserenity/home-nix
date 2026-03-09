@@ -57,7 +57,6 @@
                 
                 # temporary workarounds
                 (import ./overlays/dwarfs-boost.nix)
-                (import ./overlays/picosvg.nix)
               ];
             }
 
@@ -83,7 +82,6 @@
                 
                 # temporary workarounds
                 (import ./overlays/dwarfs-boost.nix)
-                (import ./overlays/picosvg.nix)
               ];
             }
 
