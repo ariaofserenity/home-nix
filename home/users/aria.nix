@@ -48,6 +48,9 @@
     remmina
     tigervnc
     rustdesk-flutter
+    calibre
+    docker-compose
+    zip
 
     #games
     xivlauncher-rb

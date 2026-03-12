@@ -524,8 +524,8 @@
         enableDdcSupport = false;
       };
       colorSchemes = {
-        useWallpaperColors = true;
-        predefinedScheme = "Catppuccin";
+        useWallpaperColors = false;
+        predefinedScheme = "Tokyo Night";
         darkMode = true;
         schedulingMode = "off";
         manualSunrise = "06:30";
@@ -591,7 +591,21 @@
         session = "";
       };
       plugins = {
-        autoUpdate = false;
+        autoUpdate = true;
+        sources = [
+          {
+            enabled = true;
+            name = "Official Noctalia Plugins";
+            url = "https://github.com/noctalia-dev/noctalia-plugins";
+          }
+        ];
+        states = {
+          color-scheme-creator = {
+            enabled = true;
+            sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+          };
+        };
+        version = 2;
       };
       desktopWidgets = {
         enabled = true;

@@ -37,7 +37,6 @@
   ];
 
   imports = [
-    ../programs/niri
     ../programs/browsers
     ../programs/discord.nix
     ../programs/terminals/ghostty.nix
