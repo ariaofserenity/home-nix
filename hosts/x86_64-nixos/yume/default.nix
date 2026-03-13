@@ -99,14 +99,20 @@
     package = pkgs.bluez;
   };
 
-  hardware.nvidia.prime = {
-    intelBusId = "PCI:0@0:2:0";
-    nvidiaBusId = "PCI:1@0:0:0";
-  };
+hardware.nvidia = {
+  open = true;
+  modesetting.enable = true;
+  powerManagement.enable = true;
 
-  hardware.graphics.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia.open = true;
+  prime = {
+    sync.enable = true;
+    intelBusId  = "PCI:0:2:0";
+    nvidiaBusId = "PCI:1:0:0";
+  };
+};
+
+hardware.graphics.enable = true;
+services.xserver.videoDrivers = [ "nvidia" ];
 
   boot = {
     loader = {
