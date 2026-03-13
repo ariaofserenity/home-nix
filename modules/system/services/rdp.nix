@@ -1,18 +1,10 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    wayvnc
+    krdp
   ];
 
-  networking.firewall.allowedTCPPorts = [ 5900 ];
+  services.xrdp.enable = true;
 
-  systemd.user.services.wayvnc = {
-    description = "wayvnc VNC server";
-    wantedBy = [ "graphical-session.target" ];
-    partOf = [ "graphical-session.target" ];
-    serviceConfig = {
-      ExecStart = "${pkgs.wayvnc}/bin/wayvnc 0.0.0.0 5900";
-      Restart = "on-failure";
-    };
-  };
+  networking.firewall.allowedTCPPorts = [ 5900 ];
 }
