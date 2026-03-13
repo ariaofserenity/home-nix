@@ -37,6 +37,8 @@
     ];
   };
 
+  networking.firewall.allowedTCPPorts = [ 3389 ];
+
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
