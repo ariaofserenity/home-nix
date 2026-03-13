@@ -31,6 +31,8 @@
     thunar
     thunar-volman
     thunar-archive-plugin
+    freerdp
+    lshw
 
     #apps
     firefox
