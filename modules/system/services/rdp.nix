@@ -6,5 +6,5 @@
 
   services.xrdp.enable = true;
 
-  networking.firewall.allowedTCPPorts = [ 5900 ];
+  networking.firewall.allowedTCPPorts = [ 3389 ];
 }
