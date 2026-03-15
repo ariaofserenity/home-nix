@@ -11,7 +11,6 @@
       xdg-desktop-portal-gtk
       xdg-desktop-portal-wlr
       xdg-desktop-portal-gnome
-      xdg-desktop-portal-kde
     ];
     config = {
       common = {
