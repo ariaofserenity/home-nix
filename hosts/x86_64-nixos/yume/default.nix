@@ -19,6 +19,7 @@
     # system programs
     ../../../modules/system/programs/obs.nix
     ../../../modules/system/programs/steam.nix
+    ../../../modules/system/programs/sunshine.nix
 
     # system services
     ../../../modules/system/services/flatpak.nix
