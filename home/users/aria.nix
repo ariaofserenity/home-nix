@@ -53,6 +53,7 @@
     calibre
     docker-compose
     zip
+    moonlight
 
     #games
     xivlauncher-rb
