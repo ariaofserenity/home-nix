@@ -53,7 +53,9 @@
     calibre
     docker-compose
     zip
-    moonlight
+    moonlight-qt
+    qemu
+    quickemu
 
     #games
     xivlauncher-rb

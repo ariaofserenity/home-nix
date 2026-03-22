@@ -63,6 +63,8 @@
     };
   };
 
+  networking.firewall.allowedTCPPorts = [ 7700 ];
+
   programs.zsh.enable = true;
   programs.xfconf.enable = true; # allow thunar to save preferences
   services.gvfs.enable = true; # allow thunar to show mount/trash
