@@ -31,7 +31,7 @@
     thunar
     qbittorrent
     obsidian
-    dolphinEmu
+    dolphin-emu
 
     # games
     xivlauncher-rb
