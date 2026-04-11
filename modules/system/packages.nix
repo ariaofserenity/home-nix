@@ -23,6 +23,7 @@
     tuigreet
     python3
     evtest
+    xorg.xorgserver
   ];
 
 }

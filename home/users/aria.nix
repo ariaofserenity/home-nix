@@ -56,6 +56,9 @@
     moonlight-qt
     qemu
     quickemu
+    eden
+    imagemagick
+    binutils
 
     #games
     xivlauncher-rb

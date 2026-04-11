@@ -36,21 +36,43 @@
 
   networking = {
     hostName = "hoshino";
+
+    bridges = {
+      br0 = {
+        interfaces = [ "eno1" ];
+      };
+    };
+
     interfaces = {
-      eno1.ipv4.addresses = [
+      eno1 = { };
+      br0.ipv4.addresses = [
         {
           address = "192.168.2.10";
           prefixLength = 24;
         }
       ];
     };
+
     defaultGateway = {
       address = "192.168.2.1";
+      interface = "br0";
     };
+
     nameservers = [
       "192.168.2.5"
       "1.1.1.1"
     ];
+  };
+
+  environment.etc."qemu/bridge.conf".text = ''
+    allow br0
+  '';
+
+  security.wrappers.qemu-bridge-helper = {
+    setuid = true;
+    owner = "root";
+    group = "root";
+    source = "${pkgs.qemu}/libexec/qemu-bridge-helper";
   };
 
   home-manager = {
@@ -63,7 +85,17 @@
     };
   };
 
-  networking.firewall.allowedTCPPorts = [ 7700 ];
+  networking.firewall.allowedTCPPorts = [
+    7700
+    25565
+    7777
+    7778
+  ];
+
+  networking.firewall.allowedUDPPorts = [
+    7777
+    7778
+  ];
 
   programs.zsh.enable = true;
   programs.xfconf.enable = true; # allow thunar to save preferences
@@ -106,6 +138,8 @@
 
   services.dbus.enable = true;
   services.dbus.packages = with pkgs; [ bluez ];
+
+  i18n.extraLocales = [ "ja_JP.UTF-8/UTF-8" ];
 
   services.printing.enable = true;
 

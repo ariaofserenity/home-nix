@@ -31,6 +31,7 @@
     };
     nixos-fonts.url = "github:Takamatsu-Naoki/nixos-fonts";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+    eden.url = "github:daaboulex/eden-nix";
   };
 
   outputs =
@@ -42,6 +43,7 @@
       aagl,
       nur,
       nix-flatpak,
+      eden,
       ...
     }@inputs:
     {
@@ -54,13 +56,14 @@
               nixpkgs.overlays = [
                 aagl.overlays.default
                 nur.overlays.default
-                
+
                 # temporary workarounds
                 (import ./overlays/dwarfs-boost.nix)
               ];
             }
 
             nixos-xivlauncher-rb.nixosModules.default
+            eden.nixosModules.default
 
             { nixpkgs.config.allowUnfree = true; }
 
@@ -79,9 +82,10 @@
               nixpkgs.overlays = [
                 aagl.overlays.default
                 nur.overlays.default
-                
+
                 # temporary workarounds
                 (import ./overlays/dwarfs-boost.nix)
+                (import ./overlays/quickemu.nix)
               ];
             }
 
