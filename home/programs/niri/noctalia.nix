@@ -525,7 +525,7 @@
       };
       colorSchemes = {
         useWallpaperColors = false;
-        predefinedScheme = "Tokyo Night";
+        predefinedScheme = "Naysayer";
         darkMode = true;
         schedulingMode = "off";
         manualSunrise = "06:30";

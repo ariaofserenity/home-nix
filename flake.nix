@@ -86,6 +86,7 @@
                 # temporary workarounds
                 (import ./overlays/dwarfs-boost.nix)
                 (import ./overlays/quickemu.nix)
+                (import ./overlays/xivlauncher.nix)
               ];
             }
 

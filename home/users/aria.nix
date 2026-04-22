@@ -13,7 +13,7 @@
     XCURSOR_SIZE = 12;
   };
 
-  home.packages = with pkgs; [
+home.packages = with pkgs; [
     vim
     unzip
     rar
@@ -33,11 +33,11 @@
     thunar-archive-plugin
     freerdp
     lshw
-
-    #apps
+#apps
     firefox
     lutris
     prismlauncher
+    vesktop
     file-roller
     qbittorrent
     obsidian
@@ -59,10 +59,18 @@
     eden
     imagemagick
     binutils
-
     #games
-    xivlauncher-rb
-  ];
+    (pkgs.callPackage "${inputs.nixos-xivlauncher-rb}/xivlauncher-rb/default.nix" {
+      dotnetCorePackages = pkgs.dotnetCorePackages // {
+        dotnet_10 = pkgs.dotnetCorePackages.dotnet_10 // {
+          sdk = pkgs.dotnetCorePackages.combinePackages [
+            pkgs.dotnetCorePackages.dotnet_9.sdk
+            pkgs.dotnetCorePackages.dotnet_10.sdk
+          ];
+        };
+      };
+    })
+];
 
   gtk = {
     enable = true;
