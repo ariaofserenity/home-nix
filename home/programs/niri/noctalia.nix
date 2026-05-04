@@ -525,7 +525,7 @@
       };
       colorSchemes = {
         useWallpaperColors = false;
-        predefinedScheme = "Naysayer";
+        predefinedScheme = "Osaka jade";
         darkMode = true;
         schedulingMode = "off";
         manualSunrise = "06:30";

@@ -60,16 +60,7 @@ home.packages = with pkgs; [
     imagemagick
     binutils
     #games
-    (pkgs.callPackage "${inputs.nixos-xivlauncher-rb}/xivlauncher-rb/default.nix" {
-      dotnetCorePackages = pkgs.dotnetCorePackages // {
-        dotnet_10 = pkgs.dotnetCorePackages.dotnet_10 // {
-          sdk = pkgs.dotnetCorePackages.combinePackages [
-            pkgs.dotnetCorePackages.dotnet_9.sdk
-            pkgs.dotnetCorePackages.dotnet_10.sdk
-          ];
-        };
-      };
-    })
+    xivlauncher-rb
 ];
 
   gtk = {
