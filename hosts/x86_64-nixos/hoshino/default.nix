@@ -26,6 +26,7 @@
     ../../../modules/system/services/keyring.nix
     ../../../modules/system/services/ssh.nix
     ../../../modules/system/services/syncthing.nix
+    ../../../modules/system/services/tailscale.nix
     inputs.home-manager.nixosModules.default
 
     # games
@@ -68,6 +69,7 @@
   environment.etc."qemu/bridge.conf".text = ''
     allow br0
   '';
+
 
   security.wrappers.qemu-bridge-helper = {
     setuid = true;

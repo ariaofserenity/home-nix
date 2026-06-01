@@ -7,6 +7,7 @@
   hardware.steam-hardware.enable = true;
   programs.steam = {
     enable = true;
+    extest.enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
@@ -16,13 +17,14 @@
 
   programs.gamescope = {
     enable = true;
-    capSysNice = true;
+    capSysNice = false;
     args = [
       "--rt"
       "--expose-wayland"
     ];
   };
-
+  
+  programs.steam.extraPackages = with pkgs; [ hidapi ];
   programs.gamemode.enable = true;
   environment.systemPackages = with pkgs; [
     libusb1

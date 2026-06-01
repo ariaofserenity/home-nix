@@ -84,9 +84,10 @@
                 nur.overlays.default
 
                 # temporary workarounds
-                (import ./overlays/dwarfs-boost.nix)
-                (import ./overlays/quickemu.nix)
+                #(import ./overlays/dwarfs-boost.nix)
+                #(import ./overlays/quickemu.nix)
                 (import ./overlays/skip-openldap-tests.nix)
+                #(import ./overlays/xivlauncher.nix)
               ];
             }
 
