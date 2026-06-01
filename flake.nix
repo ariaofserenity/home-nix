@@ -29,6 +29,7 @@
     nur = {
       url = "github:nix-community/NUR";
     };
+    nixcord.url = "github:FlameFlag/nixcord";
     nixos-fonts.url = "github:Takamatsu-Naoki/nixos-fonts";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     eden.url = "github:daaboulex/eden-nix";

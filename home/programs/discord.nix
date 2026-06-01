@@ -1,13 +1,16 @@
 {
+  inputs,
   pkgs,
   ...
 }:
 {
-  home.packages = with pkgs; [
-    (discord.override {
-      withVencord = true;
-    })
-  ];
+  imports = [ inputs.nixcord.homeModules.nixcord ];
+
+  programs.nixcord = {
+    enable = true;
+    discord.vencord.enable = true;
+    discord.krisp.enable = true;
+  };
 
   services.arrpc = {
     enable = true;
