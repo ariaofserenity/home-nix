@@ -24,6 +24,7 @@
     python3
     evtest
     xorg.xorgserver
+    p7zip
   ];
 
 }
