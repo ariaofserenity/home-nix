@@ -14,13 +14,7 @@ in
     in
     {
       "${mod}+Return".action = spawn apps.terminal;
-      "Ctrl+Alt+L".action.spawn = [
-        "noctalia-shell"
-        "ipc"
-        "call"
-        "lockScreen"
-        "lock"
-      ];
+      "Ctrl+Alt+L".action.spawn = ["noctalia" "msg" "session" "lock"];
       "Alt+D".action = spawn apps.appLauncher;
       "${mod}+O" = {
         action = toggle-overview;

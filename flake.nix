@@ -1,6 +1,6 @@
 {
   inputs = {
-    #nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -42,6 +42,7 @@
       nixpkgs,
       home-manager,
       nixos-xivlauncher-rb,
+      nixpkgs-unstable,
       aagl,
       nur,
       nix-flatpak,
@@ -78,18 +79,20 @@
 
         hoshino = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = { inherit inputs; };
+          specialArgs = {
+            inherit inputs;
+            pkgs-unstable = import inputs.nixpkgs-unstable {
+              system = "x86_64-linux";
+              config.allowUnfree = true;
+            };
+          };
           modules = [
             {
               nixpkgs.overlays = [
                 aagl.overlays.default
                 nur.overlays.default
 
-                # temporary workarounds
-                #(import ./overlays/dwarfs-boost.nix)
-                #(import ./overlays/quickemu.nix)
                 (import ./overlays/skip-openldap-tests.nix)
-                #(import ./overlays/xivlauncher.nix)
               ];
             }
 

@@ -5,7 +5,15 @@
 {
   programs.niri = {
     enable = true;
-    package = pkgs.niri;
+    package = pkgs.niri.overrideAttrs (prev: {
+      patches = (prev.patches or []) ++ [
+        (pkgs.fetchurl {
+          name = "shm-sharing";
+          url = "https://github.com/wrvsrx/niri/compare/tag_support-shm-sharing_4~19..tag_support-shm-sharing_4.patch";
+          hash = "sha256-LLbzjrUmCXOCqboGKFc19Lw7hyE2tMHJdadWtltfn5U=";
+        })
+      ];
+    });
     settings = {
       cursor.size = 12;
       prefer-no-csd = true;
