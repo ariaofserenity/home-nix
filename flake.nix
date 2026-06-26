@@ -65,7 +65,7 @@
               ];
             }
 
-            nixos-xivlauncher-rb.nixosModules.default
+            #nixos-xivlauncher-rb.nixosModules.default 
             eden.nixosModules.default
 
             { nixpkgs.config.allowUnfree = true; }
@@ -81,10 +81,6 @@
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs;
-            pkgs-unstable = import inputs.nixpkgs-unstable {
-              system = "x86_64-linux";
-              config.allowUnfree = true;
-            };
           };
           modules = [
             {
@@ -93,6 +89,7 @@
                 nur.overlays.default
 
                 (import ./overlays/skip-openldap-tests.nix)
+                (import ./overlays/openblas.nix)
 
               ];
             }

@@ -60,7 +60,7 @@ home.packages = with pkgs; [
     imagemagick
     binutils
     #games
-    xivlauncher-rb
+    inputs.nixos-xivlauncher-rb.packages.x86_64-linux.xivlauncher-rb
 ];
 
   gtk = {
