@@ -27,6 +27,7 @@
     ../../../modules/system/services/ssh.nix
     ../../../modules/system/services/syncthing.nix
     ../../../modules/system/services/tailscale.nix
+    ../../../modules/system/appimage.nix
     inputs.home-manager.nixosModules.default
 
     # games

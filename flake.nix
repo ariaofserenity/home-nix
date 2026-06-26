@@ -20,7 +20,7 @@
     };
     nixos-xivlauncher-rb = {
       url = "github:The1Penguin/nixos-xivlauncher-rb";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     disko = {
       url = "github:nix-community/disko/latest";
@@ -93,6 +93,7 @@
                 nur.overlays.default
 
                 (import ./overlays/skip-openldap-tests.nix)
+
               ];
             }
 
